@@ -9,6 +9,7 @@ pymongo
 scikit-learn
 dill 
 pyaml 
+mlflow 
 # collections.abc 
 
 # -e .
