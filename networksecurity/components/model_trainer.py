@@ -20,6 +20,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier, GradientBoostingClassifier,RandomForestClassifier
 
+import dagshub
+dagshub.init(repo_owner='barvesneha2607', repo_name='NetSecML', mlflow=True)
 
 
 
@@ -110,7 +112,7 @@ class ModelTrainer:
         save_object(self.model_trainer_config.trained_model_file_path, obj = NetworkModel)
        
         # model pusher
-        # save_object("final_model/model.pkl", best_model) 
+        save_object("final_model/model.pkl", best_model) 
 
         # Model Trainer Artifact
         model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path = self.model_trainer_config.trained_model_file_path,
