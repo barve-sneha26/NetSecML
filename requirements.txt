@@ -12,3 +12,6 @@ pyaml
 # collections.abc 
 
 # -e .
+
+
+# pip install --upgrade pymongo 

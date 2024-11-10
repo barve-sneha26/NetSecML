@@ -88,7 +88,7 @@ class DataValidation:
                 error_message = f"test dataframe does not contain all columns"
 
 
-             ## check for data drift 
+            # check for data drift 
             status = self.detect_data_drift(base_df=train_df, current_df= test_df)
             dir_path = os.path.dirname(self.data_validation_config.valid_train_file_path)
             os.makedirs(dir_path, exist_ok=True) 
@@ -109,5 +109,6 @@ class DataValidation:
                 drift_report_file_path=self.data_validation_config.drift_report_file_path,
             )
             return data_validation_artifact     
+        
         except Exception as e:
             raise NetworkSecurityException(e, sys) 
